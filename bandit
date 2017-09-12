@@ -1,0 +1,86 @@
+boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+
+6:DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+-------------------------------------
+7: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+import os
+import pwd
+
+for root, dirs, fnames in os.walk('/'):
+    for fname in fnames:
+        fullpath = os.path.join(root, fname)
+        size = os.path.getsize(fullpath)
+        if size != 33:
+            continue
+
+        uid = os.stat(fullpath).st_uid
+        if pwd.getpwuid(uid).pw_name != 'bandit7':
+            continue
+
+        print(fullpath)
+        with open(fullpath) as f:
+            print(f.read())
+
+/var/lib/dpkg/info/bandit7.password
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+-------------------------------------
+8 cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+bandit7@bandit:~$ cat data.txt | grep millionth
+millionth   cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+-------------------------------------
+9 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+from collections import Counter
+lines = open('data.txt').readlines()
+c = Counter(lines)
+>>> c
+Counter({'fT2jHKBueBICwsubarYBubdtYvrOfPuf\n': 10, '5aqMrxqvjdPTNevfxeu6aOUGoMjmydvO\n': 10, 'UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR\n': 1})
+
+
+-------------------------------------
+10 truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+bandit9@bandit:~$ strings data.txt | grep =
+J========== the
+$G=G
+1z.=3
+========== password
+=12{Q2
+========== is
+:"jwKm=g,
+B6a=
+z(Y=
+W========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+f!"a#=
+=Y}u+
+\;F$=
+hVV= 
+
+-------------------------------------
+11 The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+-------------------------------------
+12 The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+-------------------------------------
+13
+The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+-------------------------------------
+14 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+-------------------------------------
+15 BfMYroe26WYalil77FoDi9qh59eK5xNr
+-------------------------------------
+16
+-------------------------------------
+17
+-------------------------------------
+18
+-------------------------------------
+19
+-------------------------------------
+20
+
