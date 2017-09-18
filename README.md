@@ -1,2 +1,4 @@
 # overthewire
-solutions for http://overthewire.org/wargames/bandit/
+
+My solutions for cool games http://overthewire.org/wargames/
+
