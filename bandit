@@ -160,12 +160,26 @@ To gain access to the next level, you should use the setuid binary in the homedi
 -------------------------------------
 21
 There is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21).
+# 4321 is a random useless port
+echo "GbKksEFF4yrVs6il55v6gwY5aVje5f0j" | nc -l 4321 &
+./suconnect 4321
+
+Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+Password matches, sending next password
+bandit20@bandit:~$ gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
 
 -------------------------------------
 22
+less /etc/cron.d/cronjob_bandit22
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 -------------------------------------
 23
+ less /etc/cron.d/cronjob_bandit23
+ $(echo I am user bandit23 | md5sum | cut -d ' ' -f 1)
+8ca319486bfbbc3663ea0fbe81326349
+
+ cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
 -------------------------------------
 24
--------------------------------------
-25
